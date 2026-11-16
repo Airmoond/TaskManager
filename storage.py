@@ -1,7 +1,10 @@
 import json
 from task import Task
+from pathlib import Path
 
-def save_tasks(task_dict, next_id,file_path="tasks.json"):
+BASE_DIR = Path(__file__).resolve().parent
+DATA_FILE = BASE_DIR/"tasks.json"
+def save_tasks(task_dict, next_id,file_path=DATA_FILE):
     # 1. 创建一个空字典
     json_dict={
         "next_id":next_id,
@@ -22,7 +25,7 @@ def save_tasks(task_dict, next_id,file_path="tasks.json"):
         json.dump(json_dict,f,ensure_ascii=False,indent=4)
 
 
-def load_tasks(file_path):
+def load_tasks(file_path=DATA_FILE):
     with open(file_path,"r",encoding="utf-8")as f:
         data=json.load(f)
     task_dict={}

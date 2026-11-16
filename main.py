@@ -14,7 +14,7 @@ def main():
     manager_instance=TaskManager()
     
     try:
-        task_dict_loaded,next_id_loaded=load_tasks("tasks.json")
+        task_dict_loaded,next_id_loaded=load_tasks()
         manager_instance.task_dict=task_dict_loaded
         manager_instance.next_id=next_id_loaded
     except FileNotFoundError:
