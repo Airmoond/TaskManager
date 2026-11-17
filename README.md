@@ -48,3 +48,7 @@ python main.py
 - **Python 3.10+**：使用类组织任务和管理逻辑，使用 `match/case` 处理菜单选项。
 - **`json`**：读写本地任务数据。
 - **`pathlib`**：定位项目目录下的 `tasks.json`。
+
+- ## Remote Sync Test
+
+This change was committed directly on GitHub.
